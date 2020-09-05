@@ -1,0 +1,20 @@
+import Api from '@/services/Api'
+
+export default {
+  fetchItems (collectionValue) {
+    return Api().get('items', {
+		params: {
+      collection: collectionValue
+		}
+	})
+  },
+  addItem(value, sourceValue, collectionValue){
+    return Api().get('add', {
+    params: {
+      collection: collectionValue,
+      link: value,
+      source: sourceValue
+    }
+    })
+  }
+}
