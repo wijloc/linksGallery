@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "build-front-end": "cd frontend && npm run build --fix",
-    "deploy": "rm dist -r && mkdirp dist && cp frontend/dist -r dist/static && cp backend/src/index.js dist/index.js && cp backend/package.json dist/package.json",
-    "start-deployed": "cd dist && npm install && SET NODE_ENV=production && node index.js"
+    "deploy": "rm dist -rf && mkdirp dist && cp frontend/dist -r dist/static && cp backend/src/index.js dist/index.js && cp backend/package.json dist/package.json"
   },
   "dependencies": {
     "mkdirp": "^1.0.4"
